@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:realestate/admin/orders/order_list.dart';
 import 'package:realestate/admin/pages/add_property.dart';
 import 'package:realestate/admin/pages/admin_page.dart';
 import 'package:realestate/admin/pages/properties.dart';
@@ -37,8 +38,10 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(builder: (_)=>HelpCenter());
     case Pages.routeName:
       return MaterialPageRoute(builder: (_)=>Pages());
-    // case UsersPageAdmin.routeName:
-    //     return MaterialPageRoute(builder: (_)=>UsersPageAdmin());
+    case  OrderList.routeName:
+      return MaterialPageRoute(builder: (_)=>OrderList());
+    case UsersPageAdmin.routeName:
+        return MaterialPageRoute(builder: (_)=>UsersPageAdmin());
 
     default:
       return MaterialPageRoute(builder: (_) => HomePage());

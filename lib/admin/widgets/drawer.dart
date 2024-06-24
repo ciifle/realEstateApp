@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:realestate/admin/orders/order_list.dart';
 import 'package:realestate/admin/pages/admin_page.dart';
 import 'package:realestate/admin/pages/properties.dart';
 import 'package:realestate/admin/pages/users_page.dart';
@@ -112,7 +113,30 @@ class AdminDrawer extends StatelessWidget {
                 ),
                 ListTile(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>UsersPageAdmin()));
+                    Navigator.pushNamed(context, OrderList.routeName);
+                  },
+                  title: Text(
+                    "Order list",
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
+                    ),
+                  ),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                  ),
+                  leading: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.done,
+                        size: 30,
+                        color: Colors.white,
+                      )),
+                ),
+                ListTile(
+                  onTap: () {
+                    Navigator.pushNamed(context, UsersPageAdmin.routeName);
                   },
                   title: Text(
                     "Users",

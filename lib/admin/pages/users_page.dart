@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:realestate/models/user_model.dart';
 import 'package:realestate/user/services/auth_services.dart';
 class UsersPageAdmin extends StatefulWidget {
-  static final routeName = "/users";
+  static const routeName = "/users";
   const UsersPageAdmin({super.key});
 
   @override
